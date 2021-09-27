@@ -1,8 +1,14 @@
-def My_save(x,y):
-    import os
-    if not os.path.exists(r"C:\Users\joshw\Desktop\Python text saves\Saves"):
-        os.makedirs(r"C:\Users\joshw\Desktop\Python text saves\Saves")
-    My_file = open(r"C:\Users\joshw\Desktop\Python text saves\Saves\-"+ x + ".txt", "w")
-    My_file.write("""start\n"""+ y + """
-    end""")
-    My_file.close()
+#give a word to be turned into a lettersum
+letters = input("please gime me a word")
+
+print (letters)
+#list to save the numbers of each character
+numbers = []
+#code to separate the inputted words characters to turn them into numbers
+for letter in letters:
+  number = ord(letter) - 96
+  numbers.append(number)
+#adds the sum of all the character numbers together
+print(numbers)
+Sum=sum(numbers)
+print(Sum)
